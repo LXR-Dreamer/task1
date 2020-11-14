@@ -1,0 +1,180 @@
+<!DOCTYPE HTML>
+<script type="text/javascript">
+ function a(){
+   var username = document.getElementById("username").value;
+   var password = document.getElementById("password").value;
+    if (username != "100"){
+         alert("学号错误！")
+         return
+    } 
+    else if (password !="123456789"){
+        alert("密码错误！")
+    }
+    else{
+        xianshi();
+    }
+ }
+function xianshi(){
+		document.getElementById('xinxi').style.display="";
+}
+function hidder(){
+		document.getElementById('xinxi').style.display="none";
+}
+</script>
+
+<html>
+<title>云家园</title>
+<body onload='hidder()'>
+</body>
+<style>
+body{
+    background-color:rgba(218, 213, 213, 0.747)
+}
+.denglu{
+    position: absolute;
+    left:160px;
+    top: 120px;
+    color:rgb(0,0,0);
+    font-size:28px;
+    font-family:"宋体"
+    font-weight: bold;
+}
+ .baikuang {
+    position: absolute;
+    left: 543px;
+    top: 140px;
+    background-color:white;
+    width: 400px;
+    height: 500px;
+    border: 5px solid white;
+       }
+ .zhanghaoshuru{
+        position: absolute;
+        left: 105px;
+        top: 180px;
+           }    
+
+.mimashuru{
+        position: absolute;
+        left: 105px;
+        top: 250px;
+           }
+.Login{
+    position: absolute;
+        left: 50px;
+        top: 320px;
+}
+.Loginanniu{
+        width:285px;
+        height: 35px;
+        background-color:rgb(26,133,255);
+        border-radius:5px;
+        color: white;
+        border:1px white solid;}
+        .Loginanniu:hover{background-color:rgb(56,161,255);
+        }
+
+.xinxi{         
+
+				position: fixed;
+				width: 100%;
+				height: 100%;
+                opacity: 0.75;
+                background: #000;
+			}
+			.tankuang{
+				position: fixed;
+				background: #fff;
+                left: 470px;
+				top: 60px;
+				width: 35%;
+				height: 40%;
+				border-radius: 5px;
+				margin: 5% auto;
+			}
+			#header{
+				height: 40px;
+			}
+			#header-right{
+				position: absolute;
+				width: 25px;
+				height: 25px;
+				border-radius: 5px;
+				background: red;
+				color: #fff;
+				right: 5px;
+				top: 5px;
+				text-align: center;
+			}
+span{
+    font-size:20px;
+    font-family:"宋体"
+    font-weight: bold;
+}
+.xiao{
+    font-size:16px;
+    font-family:"宋体"
+}
+.ok{    position: absolute;
+        left:470px ;
+        width:50px;
+        height: 40px;
+        background-color:rgb(26,133,255);
+        border-radius:5px;
+        color: white;
+        border:1px white solid;}
+        .Loginanniu:hover{background-color:rgb(56,161,255);
+
+}
+.cancel{
+        position: absolute;
+        left:400px;
+        width:50px;
+        height: 40px;
+        border-radius:5px;
+        color:black;
+        border:1px white solid;}
+        .Loginanniu:hover{background-color:rgb(56,161,255);
+}
+</style>
+
+<div class="baikuang">
+    <div class="denglu">
+        登陆
+    </div>
+    
+        <img src="标志.PNG" style="position: absolute;
+        left:140px;
+        top: 20px;"/>
+       
+        <div class="zhanghaoshuru" >
+        <input id="username" type="text" name="myName" placeholder="请输入学号" style=" width:250px; height:30px; border-radius:5px;margin-left:-55px;border:1px rgb(204,204,204) solid;padding-left: 30px;">
+        </div>
+        <div class="mimashuru" >
+        <input id="password" type="password" name="pass"  placeholder="请输入密码" style="width:250px; height:30px; border-radius:5px;margin-left:-55px;border:1px rgb(204,204,204) solid;padding-left: 30px;">
+        </div>
+    
+        <div class="Login" >
+            <button class="Loginanniu" onclick=" a()" >Login</button>
+        </div>
+        <img src="账号.PNG" style="width: 18px;height:24px;position: absolute;
+        left:55px;
+        top: 185px;"/>
+        <img src="密码.PNG" style="width: 18px;height:24px;position: absolute;
+        left:57px;
+        top: 255px;"/>
+    </div>
+    </div>
+</div>
+<div class="xinxi" id="xinxi">
+    <div class="tankuang">
+        <div id="header">
+            <span><br/>个人信息</span><hr/><br/>
+            <span class="xiao">姓名：云家园<br/>学号：100<br>性别：男<br/>地址：江西省抚州市<br/>手机号：18170415733<br/><br/><br/><hr/> </span>
+            <div id="header-right" onclick="hidder()">x</div>
+            <button class="cancel" onclick=" hidder()" >Cancel</button>
+            <button class="ok" onclick=" hidder()" >OK</button>
+        </div>
+    </div>
+</div>
+</html>
